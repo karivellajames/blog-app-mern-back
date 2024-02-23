@@ -15,7 +15,7 @@ const app = express();
 const salt = bcrypt.genSaltSync(10);
 const secret = "karivellajamesjsonsecrettoken";
 
-app.use(cors({ credentials: true, origin: "http://localhost:3000" }));
+app.use(cors({ credentials: true, origin: ["http://localhost:3000" , "https://blog-app-mern-back-dri3.onrender.com"]}));
 app.use(express.json());
 app.use(cookieParser());
 app.use("/uploads", express.static(__dirname + "/uploads"));
